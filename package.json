@@ -1,0 +1,28 @@
+{
+  "name": "node-mysql-lib",
+  "version": "1.0.0",
+  "description": "Biblioteca para conexão com mysql",
+  "main": "./lib/mysql.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osmirmariano/node-mysql-lib.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osmirmariano/node-mysql-lib/issues"
+  },
+  "homepage": "https://github.com/osmirmariano/node-mysql-lib#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
+}
