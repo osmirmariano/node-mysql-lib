@@ -1,6 +1,6 @@
 {
   "name": "node-mysql-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Biblioteca para conexão com mysql",
   "main": "./lib/mysql.js",
   "directories": {

@@ -1,6 +1,24 @@
+const mysql = require("mysql");
 
 class Conexao {
-    async connect (res, req) {
+    async connect (req) {
+        if(!req.host)
+            return ({
+                message: "Host é obrigatório",
+            });
+        else if(!req.user) {
+            return ({
+                message: "User é obrigatório",
+            });
+        } else if(!req.password) {
+            return ({
+                message: "Password é obrigatório",
+            });
+        } else if(!req.db)
+            return ({
+                message: "Db é obrigatório",
+            });
+
         const connection_db = mysql.createConnection({
             HOST: `${req.host}`,
             USER: `${req.user}`,
@@ -9,7 +27,7 @@ class Conexao {
         });
     
         connection_db.connect(error => {
-            if (error) res.json({
+            if (error) return ({
                 messageCode: 3,
                 message: {
                     title: "Erro",
@@ -18,7 +36,7 @@ class Conexao {
                 }
             });
  
-            res.json({
+            return ({
                 messageCode: 0,
                 message: {
                     title: "Sucesso",
